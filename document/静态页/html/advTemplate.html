@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>广告图制作</title>
+    
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/bass.css" rel="stylesheet"/>
+</head>
+<body class="template">
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">广告图制作</h1>
+	</header>
+	<div class="mui-content">
+		<p class="temTitle">选择你符合需要的模板</p>
+		<ul class="mui-table-view bannerList">
+			<li class="mui-table-view-cell">
+				<a href=".././html/banTempNews.html">
+					<img src=".././images/text.jpg" alt="">
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a href=".././html/banTempNews.html">
+					<img src=".././images/text.jpg" alt="">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="#">
+			<span class="mui-tab-label">发布文章</span>
+		</a>
+		<a class="mui-tab-item" href="#">
+			<span class="mui-tab-label">文章列表</span>
+		</a>
+		<a class="mui-tab-item mui-active" href=".././html/advList.html">
+			<span class="mui-tab-label">广告管理</span>
+		</a>
+		<a class="mui-tab-item" href="#bottomPopover">
+			<span class="mui-tab-label">会员服务</span>
+		</a>
+	</nav>
+	<!--右下角弹出菜单-->
+	<div id="bottomPopover" class="mui-popover mui-popover-bottom nav_popover">
+		<div class="mui-popover-arrow"></div>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="service_nav">
+					<li><a href=".././html/share.html">分享界面</a></li>
+					<li><a href=".././html/buySoftware.html">购买软件</a></li>
+					<li><a href=".././html/contact.html">制作图片</a></li>
+					<li><a href=".././html/alter_password.html">修改密码</a></li>
+					<li><a href="#">退出登录</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui('.mui-scroll-wrapper').scroll();
+      	   // 解决a标签点击不跳转问题
+		mui('body').on('tap','a',function(){document.location.href=this.href;});
+
+</script>
+</html>

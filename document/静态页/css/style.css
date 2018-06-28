@@ -1,0 +1,195 @@
+.ui-page-login,body {width: 100%;height: 100%;margin: 0px;padding: 0px;}
+.mui-content{height: 100%;}
+@charset "utf-8";
+*{font-family:PingFang-SC-Regular;}
+header {
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+	background: rgba(255, 255, 255, 1);
+	font-size: 1.28rem;
+	font-family: PingFang-SC-Medium;
+	color: rgba(51, 51, 51, 1);
+	position: relative;
+}
+ul{overflow: auto;}
+body,*{padding: 0; margin: 0; font-family:PingFang-SC-Regular;}
+ul li{list-style-type: none;}
+header .right{position: absolute;color:rgba(255,100,39,1); font-size: 1rem; right: 15px; }
+p{margin-bottom: 0;}
+
+input[type="submit"], input[type="reset"], input[type="button"]{ -webkit-appearance:none; resize: none; }
+/* 取消链接高亮  */
+body,div,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,a,img,button,form,table,th,tr,td,tbody,article,aside, details,figcaption,figure,footer,header,hgroup, menu,nav,section{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); }
+/* 设置HTML5元素为块 */
+header,nav,article,aside,section,footer,details,figcaption,figure,hgroup,menu{display: block; }
+/* 初始化 */
+body,ul,li,ol,h1,h2,h3,h4,h5,h6,input,textarea,select,p,dl,dt,dd,img,button,form,table,th,tr,td,tbody,details,figcaption,figure,hgroup,menu{margin:0; padding:0;}
+table {border-collapse: collapse; border-spacing: 0; empty-cells: show; font-size: inherit;}
+body{ min-width: 320px; font: normal 14px/1 "PingFang-SC-Regular",Tahoma,"Lucida Grande",Verdana,"Microsoft Yahei",STXihei,hei; overflow-x:hidden;}
+a{ text-decoration:none; }
+em,i{font-style:normal;}
+a,input,textarea {text-decoration: none; outline: 0; }
+fieldset,img {border: 0;}
+ul,ol{list-style:none;}
+img { max-width: 100%; height: auto;} /* 图s片自适应 */
+
+.relative{position: relative;}
+.absolute{position: absolute;}
+.relative{position: relative;}
+.absolute{position: absolute;}
+.white{background: #FFFFFF;}
+.fl{float: left;}
+.fr{float: right}
+
+/*导航栏底部弹出*/
+.mui-bar-nav{box-shadow: none;-webkit-box-shadow:none;border-bottom: 1px solid #ededed}
+.nav_popover{height: 14em;width: 7em} 
+.service_nav{}
+.service_nav li{padding: 0.5em;border-bottom: 1px solid #ededed;text-align: center;}
+.service_nav li:last-child{border-bottom: none}
+.service_nav li a{font-size: 0.93em;line-height: 1.5em;color: #333}
+.blcck_1{height: 1em;width: 100%;float: left}
+.bottomPopover .mui-popover .mui-scroll-wrapper{margin: 0.5em 0}
+
+
+/*zxc的样式*/
+/*登录页面*/
+.login::before,.login::after{height: 0;}
+.left_icon{position: absolute; height: 18px; width: auto; top: 50%; margin-top: -9px;}
+.form-text{padding-left: 25px!important;    height: 50px!important;line-height: 50px!important;}
+
+.login .mui-input-row{/*height: 50px!important;*/ margin-top: 0.8em;}
+.eye{   position: absolute;right: 0px;top: 50%;margin-top: -10px;width: 3em;text-align: center;}
+.eye img{ width: 1.25em;}
+.login_btn{width: 100%; height: 2.5em;  border: 1px solid transparent; color: #fff; font-size: 1.2em; 
+ border-radius: 2em;padding: 0!important; 
+font-size: 1.28em;border: 1px solid transparent;
+
+background: linear-gradient(left,#FFAA46, #FF6226);
+
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFAA46), to(#FF6226));      /* Safari 4-5, Chrome 1-9*/
+
+background: -webkit-linear-gradient(left, #FFAA46, #FF6226);   /*Safari5.1 Chrome 10+*/
+
+background: -o-linear-gradient(left, #FFAA46, #FF6226);  /*Opera 11.10+*/
+}
+.form_div{padding: 0 1.5em;}
+.noh::after{height: 0!important;}
+.login  .mui-input-row{ min-height: 50px;position:relative;}
+.login .mui-input-row:after{left: 0;}
+
+.yzm_btn{position: absolute!important; right: 0; top: 0.5em; width:6.7em;padding: 0 !important;font-size: 0.75em;
+font-family: PingFang-SC-Regular;
+color: rgba(255,255,255,1)!important;
+height:2.3em;
+background:rgba(255,100,39,1)!important;border: 1px solid transparent;
+border-radius: 4px!important; }
+.yzm_btna{position: absolute!important; right: 0; bottom: 10px; width:6.7em;padding: 0 !important;font-size: 0.75em;
+font-family: PingFang-SC-Regular;
+color: rgba(255,255,255,1)!important;
+height:30px;
+background:rgba(255,100,39,1)!important;
+border-radius: 4px!important; }
+.bo_span{font-size: 0.93em; color: #333333; margin-top: 1.28em; display: inline-block;}
+.bo_span .book{color: #FF6427;font-size: 1em;}
+.yqm_span{position: absolute;
+
+left: 0;
+
+top: 50%;
+
+font-size: 1.07em;
+
+margin-top: -0.7em;
+
+display: inline-block; }
+.clyq{height: 8.82em; margin-top: 3em;}
+.copy{width:7em; margin-top: 1.07em;display: inline-block;line-height: 2.65em;
+height:2.65em;font-size:1.07em;
+font-family:PingFangSC-Regular; border: 1px solid transparent;
+color:rgba(255,255,255,1);
+background:rgba(255,100,39,1);
+border-radius: 4px; }
+.fix_p{position: fixed; bottom: 2.96em; width: 100%; text-align: center;font-size: 0.93em; color: #333333;}
+
+.floatl{float: left;}
+.floatr{float: right;}
+.color333{color: #333333;}
+.color666{color: #666666;}
+.color999{color: #999999;}
+.FontScroll ul li em {color: #FF6427;}
+
+
+
+.left0 .mui-input-row::after{left: 0;}
+.ps_span{position: absolute;
+height: 30px;
+line-height: 30px;
+font-size: 1.1em;
+left: 0.65em;
+top: 50%;
+margin-top: -15px;
+color: #333333;}
+.pw_div{background-color: #ffffff;border-bottom: 1px solid #eeeeee;}
+.pw_div input[type="text"],.pw_div input[type="password"]{padding-left: 6.5em;min-height: 50px; font-size: 1.1em;}
+.pw_div1{background-color: #ffffff !important;
+margin-top: 10px;
+}
+.pw_btn_div{padding: 0 2.2em; margin-top: 2em;margin-bottom: 1em;}
+.pw_btn_diva{padding: 0 2.2em; margin-top: 28px;}
+
+.white{background: #FFFFFF;}
+.nohh::before,.nohh::after{ height: 0;}
+.alterh::before,.alterh::after{background-color: #f5f5f5!important;}
+.h50{min-height: 50px;}
+.forgerPd{margin-top: 13px;margin-right: 10px;text-decoration: underline;color: #007aff;}
+.tips{font-size: 0.9em;color: #999999;margin: 10px 15px;}
+
+
+
+
+/*iPhone   5:*/
+@media screen and (device-aspect-ratio: 40/71) {
+	body{font-size: 12px;}
+}
+/* iphone 6 */
+@media (min-device-width : 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2){
+  body{font-size: 14px;}
+
+}
+/* iphone6 plus */
+@media (min-device-width : 414px) and (max-device-width : 736px) and (-webkit-min-device-pixel-ratio : 3){
+     body{font-size: 16px;}
+}
+/* 判断ipad */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px){
+/* style */
+  body{font-size: 20px;}
+}
+
+/* ipad横屏 */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape){
+/* style */
+  body{font-size: 20px;}
+}
+
+/* ipad竖屏 */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait){
+/* style */
+  body{font-size: 20px;}
+}
+ /*　　这是匹配横屏的状态，横屏时的css代码　　*/
+@media all and (orientation : landscape) {
+
+
+
+} 

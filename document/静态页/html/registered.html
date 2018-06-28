@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>用户注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+	</head>
+
+	<body class="">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">用户注册</h1>
+		</header>
+		<div class="mui-content ">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/timg2.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg1.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg1.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg2.jpg">
+						</a>
+					</div>
+
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/timg.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+
+				</div>
+			</div>
+			<!--表单模块-->
+		
+				<p class="tips">请使用手机号码注册</p>
+				<form class="mui-input-group left0 nohh" style=" background: #ededed;">
+					<div class="mui-input-row pw_div alterh noh h50">
+						<span class="ps_span">账号</span>
+						<input type="text" placeholder="请输入您的手机号码" class="mui-input-clear"  value="">
+					</div>
+					<div class="mui-input-row left0 pw_div noh h50">
+						<span class="ps_span">密码</span>
+						<input type="password" placeholder="请输入您的密码" class="mui-input-password">
+					</div>
+					<div class="mui-input-row left0 pw_div noh h50">
+						<span class="ps_span">确认密码</span>
+						<input type="password" placeholder="请再次输入密码" class="mui-input-password">
+					</div>
+					<div class="mui-input-row left0 pw_div noh h50">
+						<span class="ps_span">推荐人账号</span>
+						<input type="text" placeholder="填写推荐人账号，他有奖励的哦" cclass="mui-input-clear"  value="">
+					</div>
+					
+					
+					<div class="mui-input-row noh pw_btn_div h50">
+						<button  class="mui-btn mui-btn-block mui-btn-primary " style="width: 100%;">注册</button>
+					</div>
+				</form>
+			
+		</div>
+		<script src="../js/mui.min.js"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,84 @@
+.mui-content{padding-bottom: 50px;overflow: hidden;}
+.bigF{font-size: 1.28em!important}
+.textTitle{font-size: 1.07em;color: #666;font-weight: 600;line-height: 2em}
+/*居中文本段*/
+.textTab{padding: 1em 0.5em;display: block;overflow: hidden;width: 100%;float: left;}
+.textTab p{color: #666;font-size: 0.93em;line-height: 1.6em;text-align: center;}
+.textTab p span{color: #007aff}
+/*二维码居中段*/
+.Scode{padding:0.5em 0.5em;text-align: center;width: 100%;float: left;}
+.Scode img{max-width: 100%;display: inline-block;}
+/*广告列表页*/
+.bannerList .listTitle{width: 100%;float: left;}
+.bannerList .listTitle em{font-size: 0.93em;line-height: 2em;color: #333;float: left;margin-right:1em }
+.bannerList .listTitle span{font-size: 0.93em;line-height: 2em;color: #666;float: left;}
+.bannerList .list_img{width: 65%;float: left;height: 6em;display: inline-block;padding: 0.5em;border: 1px solid #ededed}
+.bannerList .list_img img{max-width: 100%;height: 5em;display: inline-block;}
+.bannerList .list_ope{float: right;width: 30%;margin-top: 2em}
+.bannerList .list_ope button,.bannerList .list_ope a{width: 45%;font-size: 0.93em;padding: 6px 0px}
+.bannerList .mui-table-view-cell:after{left: 0px;background-color:#ededed;}
+.banner .mui-content>.mui-table-view:first-child{margin-top: 0px}
+/*广告添加*/
+.addBan form .mui-radio{float: left;}
+.addBan form .mui-input-row{clear: none}
+.addList h5{font-size: 1.07em;line-height: 2em;color: #666;font-weight: 600}
+.addList .solu{color: #666;font-size: 0.93em;margin-bottom: 1em;text-indent: 2em;font-weight: 400}
+.addList input[type="text"]{margin-bottom: 8px}
+.addBan .upload,.addBan .delete {
+	padding: 0 1em;
+    height: 3em;
+    line-height: 3em;
+    position: relative;
+    cursor: pointer;
+    color: #666;
+    background-color: #fff;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 0.93em;
+}
+.addBan .upload input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+.mui-btn-block{padding: 5px 0px;font-size: 0.93em}
+.addBan .imgBox{padding: 0.5em;margin-top: 0.5em;border:1px solid #ededed;border-radius: 5px;display: none;}
+/*广告图制作列表*/
+.template .temTitle{font-size: 1.07em;color: #333;text-align: center;line-height: 2em;background-color: #fff;padding-top: 0.5em}
+/*广告信息填写*/
+.temBan{padding:1em;background-color: #fff}
+.temBan img{max-height: 100%;max-width: 100%;display: inline-block;}
+.mui-input-group{margin-top: 1em;margin-bottom: 1em}
+.template .mui-input-row label{width: 25%;color: #333;font-size: 0.93em}
+.template .mui-input-group input{width: 75%;font-size: 0.93em;text-overflow: ellipsis;color: #666}
+.template .btn_box{padding: 0 1em}
+/*分享*/
+.share .mui-content{background-color: #fff;overflow: hidden;padding-bottom: 50px}
+.share .Sbanner{padding:0.5em;display: inline-block;width: 100%;float: left; }
+.share .Sbanner img{max-width: 100%;display: inline-block;}
+
+.share .btnTab{width: 100%;float: left;margin-top: 1em;padding: 0 2em;}
+/*购买软件*/
+.card{margin-top: 1em}
+.card .card_header{border-bottom: 1px solid #ededed;padding: 0.5em 1em;font-size: 0.93em;line-height: 1.5em;color: #333;}
+.card .card_content{border-bottom: 1px solid #ededed;padding: 0.8em 1em;font-size: 0.93em;line-height: 1.5em;color: #333;}
+.card .card_footer{padding: 0.5em 1em;font-size: 0.93em;line-height: 1.8em;color: #333;overflow: hidden;}
+.card .card_footer .mui-btn{font-size: 0.93em;height: 1.8em;line-height: 1.8em;padding: 0 0.8em}
+.card .card_footer span em{margin-right: 0.5em}
+.card .del_line{text-decoration: line-through;color: #666}
+.card .spe{color: #007aff;}
+/*支付款码*/
+.payment,.payment .mui-content{background-color: #fff;}
+.payment .Scode{padding:1em 0.5em;}
+/*制作图片*/
+.spe_ul{margin: 0 15px;overflow: hidden;padding: 0.8em 1em;}
+.spe_ul li{font-size: 0.93em;line-height: 1.5em;color: #007aff;}
+.contact .textTab{padding: 1em 15px;overflow: hidden;}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>找回密码</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/push.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+	</head>
+
+	<body class="">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">找回密码</h1>
+		</header>
+		<div class="mui-content " style="padding-bottom: 50px;">
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/timg2.jpg">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg1.jpg">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg1.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../images/timg2.jpg">
+						</a>
+					</div>
+
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../images/timg.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator"></div>
+
+				</div>
+			</div>
+			<!--表单模块-->
+		
+				<form class="mui-input-group left0 nohh" style=" background: #ededed;">
+					<div class="mui-input-row pw_div alterh noh h50 ">
+						<span class="ps_span">账号</span>
+						<input type="text" placeholder="请输入您的手机号码" class="mui-input-clear"  value="">
+						
+					</div>
+					<div class="mui-input-row pw_div alterh noh h50 re" style="padding-right: 8em;">
+						<span class="ps_span">验证码</span>
+						<input type="text" placeholder="验证码"  value="">
+						<button  class="sentSM"  type="button" >获取验证码</button>
+					</div>
+					<div class="mui-input-row left0 pw_div noh h50">
+						<span class="ps_span">密码</span>
+						<input type="password" placeholder="请输入您的密码" class="mui-input-password">
+					</div>
+					<div class="mui-input-row left0 pw_div noh h50">
+						<span class="ps_span">确认密码</span>
+						<input type="password" placeholder="请再次输入密码" class="mui-input-password">
+					</div>
+					<div class="mui-input-row noh pw_btn_div h50">
+						<button  class="mui-btn mui-btn-block mui-btn-primary " style="width: 100%;">提交</button>
+					</div>
+				</form>
+			
+		</div>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="add_article.html">
+				<span class="mui-tab-label">发布文章</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="Article_list.html">
+				<span class="mui-tab-label">文章列表</span>
+			</a>
+			<a class="mui-tab-item " href=".././html/advList.html">
+				<span class="mui-tab-label">广告管理</span>
+			</a>
+			<a class="mui-tab-item" href="#bottomPopover">
+				<span class="mui-tab-label">会员服务</span>
+			</a>
+		</nav>
+		<!--右下角弹出菜单-->
+		<div id="bottomPopover" class="mui-popover mui-popover-bottom nav_popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="service_nav">
+						<li><a href=".././html/share.html">分享界面</a></li>
+						<li><a href=".././html/buySoftware.html">购买软件</a></li>
+						<li><a href=".././html/contact.html">制作图片</a></li>
+						<li><a href=".././html/alter_password.html">修改密码</a></li>
+						<li><a href="#">退出登录</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+		<script  type="text/javascript">
+			mui.init();
+      	mui('.mui-scroll-wrapper').scroll();
+      	   // 解决a标签点击不跳转问题
+		mui('body').on('tap','a',function(){document.location.href=this.href;});
+			$(function(){
+				//倒计时60秒（以id 为btn的按钮为例子）
+				  $(".sentSM").click(function(){
+				    var wait=60;
+				    function time(o) {
+				          if (wait == 0) {
+				              o.removeAttribute("disabled");           
+				              o.innerHTML="重复验证码";
+				              wait = 60;
+				          } else {
+				              o.setAttribute("disabled", true);
+				              o.innerHTML="重新发送(" + wait + ")";
+				              wait--;
+				              setTimeout(function() {
+				                  time(o)
+				              },
+				              1000)
+				          }
+				      }
+				    time(this);
+				  });
+			})
+		</script>
+
+	</body>
+
+</html>

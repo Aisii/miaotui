@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>留言</title>
+
+		<link href="../css/mui.min.css" rel="stylesheet" />
+		<link href="../css/style.css" rel="stylesheet" />
+		<link href="../css/push.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../static/emoji/gb.css">
+		
+	</head>
+
+	<body class="contact">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">留言</h1>
+		</header>
+		<div class="mui-content">
+			<p class="article_h1">甜心颜值一天比一天高，网友：不只是五官张开了，发型事关键！</p>
+
+			<div class="emoticons">
+				<div class="publisher">
+					<textarea name="content"  id="emojiInput" placeholder="留言将由公众号筛选后显示，对所有人可见" oninput="OnInput (event)"></textarea>
+					
+						<a class="trigger" href="javascript:;"><img src="../images/face.png" class="mes-face"></a>
+					
+				</div>
+				 <div class="emoji-mod" data-textmod="emoji" id="emojiContainer" style="display: none;">
+                </div>
+                <div class="friend-mod" data-textmod="friend" style="display: none;"></div>
+
+
+			</div>
+
+			<div class="mui-input-row noh pw_btn_div h50">
+				<button class="mui-btn mui-btn-block btn-green mess_btn" style="width: 100%;" >留言</button>
+			</div>
+		</div>
+		
+		
+		 <div class="form-wrap" style="position: relative; width: 100%;">
+        <div class="form-container" style="position: relative; width: 100%;">
+            <style>
+                .water-mod-eimg .water-list, .water-mod-eimg .water-list li {
+                    height: 145px;
+                }
+            </style>
+            
+        </div>
+    </div>
+
+	</body>
+	<script src="../js/mui.min.js"></script>
+
+
+	 <script src="../static/emoji/zepto.min.js"></script>
+    <script src="../static/emoji/ZeptoEmoji.js"></script>
+   <!-- <script src="../js/jquery-2.0.3.min.js"></script>-->
+
+	
+	
+
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		mui(".pw_btn_div").on('tap','.mess_btn',function(){
+			  mui.toast('留言成功', {
+					duration: '5000',
+					type: 'div'
+				})
+		}) 
+		$(".trigger").click(function(){
+			$("#emojiContainer").toggle();
+		})
+		$("#emojiInput").focus(function(){
+			$("#emojiContainer").hide();
+		})
+
+
+
+
+//		function OnInput(event) {
+//			console.log(event.target.value)
+//			if(event.target.value == "") {
+//				$(".mess_btn").prop("disabled", "#disabled");
+//
+//			} else {
+//
+//				$(".mess_btn").prop("disabled", "");
+//			}
+//		}
+	</script>
+
+</html>

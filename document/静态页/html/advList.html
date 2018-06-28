@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>广告列表</title>
+    
+    <link href="../css/mui.min.css" rel="stylesheet"/>
+    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/bass.css" rel="stylesheet"/>
+</head>
+<body class="banner">
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">广告列表</h1>
+		<a href=".././html/newAdd.html" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">添加广告</a>
+	</header>
+	<div class="mui-content">
+		<ul class="mui-table-view bannerList">
+			<li class="mui-table-view-cell">
+				<p class="listTitle"><em>顶部</em><span>模板名称</span></p>
+				<div class="listMain">
+					<div class="list_img"><img src=".././images/text.jpg" alt=""></div>
+					<div class="list_ope">
+						<button type="button" class="mui-btn mui-btn-primary fl delete">删除</button>
+						<a href=".././html/newAdd.html" class="mui-btn mui-btn-primary fr">修改</a>
+					</div>
+				</div>
+			</li>
+			<li class="mui-table-view-cell">
+				<p class="listTitle"><em>顶部</em><span>模板名称</span></p>
+				<div class="listMain">
+					<div class="list_img"><img src=".././images/text.jpg" alt=""></div>
+					<div class="list_ope">
+						<button type="button" class="mui-btn mui-btn-primary fl delete">删除</button>
+						<a href=".././html/newAdd.html" class="mui-btn mui-btn-primary fr">修改</a>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="add_article.html">
+				<span class="mui-tab-label">发布文章</span>
+			</a>
+			<a class="mui-tab-item" href="Article_list.html">
+				<span class="mui-tab-label">文章列表</span>
+			</a>
+			<a class="mui-tab-item mui-active" href=".././html/advList.html">
+				<span class="mui-tab-label">广告管理</span>
+			</a>
+			<a class="mui-tab-item" href="#bottomPopover">
+				<span class="mui-tab-label">会员服务</span>
+			</a>
+		</nav>
+	<!--右下角弹出菜单-->
+	<div id="bottomPopover" class="mui-popover mui-popover-bottom nav_popover">
+		<div class="mui-popover-arrow"></div>
+		<div class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<ul class="service_nav">
+					<li><a href=".././html/share.html">分享界面</a></li>
+					<li><a href=".././html/buySoftware.html">购买软件</a></li>
+					<li><a href=".././html/contact.html">制作图片</a></li>
+					<li><a href=".././html/alter_password.html">修改密码</a></li>
+					<li><a href="#">退出登录</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui('.mui-scroll-wrapper').scroll();
+      	   // 解决a标签点击不跳转问题
+		mui('body').on('tap','a',function(){document.location.href=this.href;});
+		// 点击删除按钮
+		$(".delete").click(function(){
+			var that= $(this);
+			var btnArray = ['否', '是'];
+			mui.confirm('是否删除', ' ', btnArray, function(e) {
+				if (e.index == 1) {
+					that.parent().parent().parent('li').remove()
+				}
+			})
+			
+		})
+
+</script>
+</html>

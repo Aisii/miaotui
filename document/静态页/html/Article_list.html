@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>文章列表</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/push.css">
+	</head>
+	<style>
+		
+		
+		.recorda .mui-pull-bottom-pocket {
+			position: absolute !important;
+		}
+	</style>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<span class="list_title">文章列表</span>
+			<div class="Remaining">
+				<span>剩余文章：<span class="blue_">10000</span>&nbsp;&nbsp;&nbsp;天数：<span class="blue_">399</span>天</span>
+			</div>
+		</header>
+		<div class="mui-content">
+			
+			<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper" style="padding-top: 44px;padding-bottom: 50px;">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="article_ul">
+						<li>
+							<a href="Graphic_details.html">
+							<div class="article_d">
+								1、那些年你与世界杯有哪些难忘的事？
+								<span class="del_art">删除</span>
+							</div>
+							<ul class="art_sx">
+								<li>
+									阅读数：<span>1111</span>
+								</li>
+								<li>
+									点击数：<span>1111</span>
+								</li>
+								<li>
+									留言数：<span>1111</span>
+								</li>
+							</ul>
+							</a>
+						</li>
+						<li>
+							<a href="Graphic_details.html">
+							<div class="article_d">
+								1、那些年你与世界杯有哪些难忘的事？
+								<span class="del_art">删除</span>
+							</div>
+							<ul class="art_sx">
+								<li>
+									阅读数：<span>1111</span>
+								</li>
+								<li>
+									点击数：<span>1111</span>
+								</li>
+								<li>
+									留言数：<span>1111</span>
+								</li>
+							</ul>
+							</a>
+						</li>
+						<li>
+							<a href="Graphic_details.html">
+							<div class="article_d">
+								1、那些年你与世界杯有哪些难忘的事？
+								<span class="del_art">删除</span>
+							</div>
+							<ul class="art_sx">
+								<li>
+									阅读数：<span>1111</span>
+								</li>
+								<li>
+									点击数：<span>1111</span>
+								</li>
+								<li>
+									留言数：<span>1111</span>
+								</li>
+							</ul>
+							</a>
+						</li>
+						<li>
+							<a href="Graphic_details.html">
+							<div class="article_d">
+								1、那些年你与世界杯有哪些难忘的事？
+								<span class="del_art">删除</span>
+							</div>
+							<ul class="art_sx">
+								<li>
+									阅读数：<span>1111</span>
+								</li>
+								<li>
+									点击数：<span>1111</span>
+								</li>
+								<li>
+									留言数：<span>1111</span>
+								</li>
+							</ul>
+							</a>
+						</li>
+
+					</ul>
+			</div>
+		</div>
+		</div>
+		
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="add_article.html">
+				<span class="mui-tab-label">发布文章</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="Article_list.html">
+				<span class="mui-tab-label">文章列表</span>
+			</a>
+			<a class="mui-tab-item " href=".././html/advList.html">
+				<span class="mui-tab-label">广告管理</span>
+			</a>
+			<a class="mui-tab-item" href="#bottomPopover">
+				<span class="mui-tab-label">会员服务</span>
+			</a>
+		</nav>
+		<!--右下角弹出菜单-->
+		<div id="bottomPopover" class="mui-popover mui-popover-bottom nav_popover">
+			<div class="mui-popover-arrow"></div>
+			<div class="mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="service_nav">
+						<li><a href=".././html/share.html">分享界面</a></li>
+						<li><a href=".././html/buySoftware.html">购买软件</a></li>
+						<li><a href=".././html/contact.html">制作图片</a></li>
+						<li><a href=".././html/alter_password.html">修改密码</a></li>
+						<li><a href="#">退出登录</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript">
+		mui.init();
+      	mui('.mui-scroll-wrapper').scroll();
+      	   // 解决a标签点击不跳转问题
+		mui('body').on('tap','a',function(){document.location.href=this.href;});
+		$(function() {
+			//点击删除
+			$(".article_d").delegate(".del_art", "tap", function() {
+				var that = $(this)
+				var btnArray = ['取消', '确认'];
+				mui.confirm('确认删除这篇文章？', '提示', btnArray, function(e) {
+					if(e.index == 1) {
+						//点击确认
+						that.parents("li").remove();
+					} else {
+						//点击取消
+						console.log("MUI没有得到你的认可，继续加油")
+					}
+				})
+			})
+		})
+		// 下拉刷新
+		mui.init({
+			pullRefresh: {
+				container: '#pullrefresh',
+				down: {
+					style: 'circle',
+					callback: pulldownRefresh
+				},
+				up: {
+					auto: true,
+					contentrefresh: '正在加载...',
+					callback: pullupRefresh
+				}
+			}
+		});
+		var count = 0;
+
+		function pullupRefresh() {
+			setTimeout(function() {
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+				var table = document.body.querySelector('.article_ul');
+				var cells = document.body.querySelectorAll('li');
+				var newCount = cells.length > 0 ? 6 : 20; //首次加载20条，满屏
+				for(var i = cells.length, len = i + newCount; i < len; i++) {
+					var li = document.createElement('li');
+					// li.className = 'mui-table-view-cell';
+					li.innerHTML = '<a href="Graphic_details.html"><div class="article_d">1、那些年你与世界杯有哪些难忘的事？' +
+						'<span class="del_art">删除</span></div>' +
+						'<ul class="art_sx">' +
+						'<li>阅读数：<span>1111</span></li>' +
+						'<li>点击数：<span>1111</span></li>' +
+						'<li>留言数：<span>1111</span></li></ul></a>'
+
+					table.appendChild(li);
+				}
+			}, 1500);
+		}
+
+		function addData() {
+			var table = document.body.querySelector('.article_ul');
+			var cells = document.body.querySelectorAll('li');
+			for(var i = cells.length, len = i + 6; i < len; i++) {
+				var li = document.createElement('li');
+				// li.className = 'mui-table-view-cell';
+				li.innerHTML = '<a href="Graphic_details.html"><div class="article_d">1、那些年你与世界杯有哪些难忘的事？' +
+					'<span class="del_art">删除</span></div>' +
+					'<ul class="art_sx">' +
+					'<li>阅读数：<span>1111</span></li>' +
+					'<li>点击数：<span>1111</span></li>' +
+					'<li>留言数：<span>1111</span></li></ul></a>'
+
+				//下拉刷新，新纪录插到最前面；
+				table.insertBefore(li, table.firstChild);
+			}
+		}
+		/**
+		 * 下拉刷新具体业务实现
+		 */
+		function pulldownRefresh() {
+			setTimeout(function() {
+				addData();
+				mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+			}, 1500);
+		}
+	</script>
+
+</html>
